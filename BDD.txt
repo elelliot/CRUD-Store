@@ -1,0 +1,51 @@
+CREATE DATABASE `tienda`;
+
+use `tienda`;
+
+-----------------------------------------
+DROP TABLE `categoria`;
+
+
+CREATE TABLE `categoria` (
+  `idCategoria` int(11) auto_increment NOT NULL,
+  `categoria` varchar(100) NOT NULL,
+  PRIMARY KEY (`idCategoria`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+SELECT * FROM categoria;
+
+-------------------------------------------
+
+DROP TABLE `producto`;
+
+CREATE TABLE `producto`(
+`idProducto` int (11) auto_increment NOT NULL,
+`nombre` varchar(100) NOT NULL,
+`categoria` varchar(30) NOT NULL,
+`precio` decimal(10,2) NOT NULL,
+`existencia` int(5) NOT NULL,
+`foto` longblob NOT NULL,
+PRIMARY KEY (`idProducto`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+SELECT * FROM producto;
+
+
+----------------------------------------
+DROP TABLE `user`;
+
+
+
+CREATE TABLE `user` (
+  `iduser` int(11) auto_increment NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `nombre` varchar (70) NOT NULL,
+  PRIMARY KEY (`iduser`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+
+
+SELECT * FROM user;
